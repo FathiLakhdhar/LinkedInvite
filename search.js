@@ -1,8 +1,8 @@
 (function(){
 
     var index = -1;
-    var stop = false;
-    (function periodicall(){
+    var stop = true;
+    function periodicall(){
         var btnInvites = document.querySelectorAll(".search-result__actions button");
         if(stop) return;
         index++;
@@ -39,15 +39,15 @@
         }
 
         
-    })();
+    };
 
 
     Api = {
         stop : ()=> stop = true,
         start : ()=> {
             if(stop){
-                periodicall();
                 stop = false;
+                periodicall();
             }
         }
     }
