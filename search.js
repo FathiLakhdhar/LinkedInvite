@@ -7,7 +7,7 @@
         if(stop) return;
         index++;
         scroll(0, document.body.clientHeight * (index / 10));
-        if(index == btnInvites.length){
+        if(index >= btnInvites.length){
             index = 0;
             console.info("load next page");
             document.querySelector("button.next").click()
