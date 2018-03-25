@@ -1,5 +1,6 @@
 (function(){
 
+    var count = 0;
     var index = -1;
     var stop = true;
     function periodicall(){
@@ -21,6 +22,7 @@
             if(btnInvites[index] && btnInvites[index].innerText == "Se connecter"){
                 console.log("before click")
                 btnInvites[index].click();
+                count++;
                 console.log("after click")
     
                 setTimeout(function(){
@@ -49,7 +51,8 @@
                 stop = false;
                 periodicall();
             }
-        }
+        },
+        count: ()=> count
     }
 
     window["Linkedin"] = Api;
