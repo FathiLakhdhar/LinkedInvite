@@ -11,7 +11,7 @@
         if(index >= btnInvites.length){
             index = 0;
             console.info("load next page");
-            document.querySelector("button.next").click()
+            (document.querySelector("button.next") || document.querySelector("button.artdeco-pagination__button--next")).click()
             setTimeout(function(){
                 periodicall();
                 scroll(0, document.body.clientHeight);
@@ -19,7 +19,7 @@
         }else{
             
             console.log("index : ",index);        
-            if(btnInvites[index] && btnInvites[index].innerText == "Se connecter"){
+            if(btnInvites[index] && ["Se connecter", "Connect"].includes(btnInvites[index].innerText)){
                 console.log("before click")
                 btnInvites[index].click();
                 count++;
@@ -27,7 +27,7 @@
     
                 setTimeout(function(){
                     var envoyer = document.querySelector("div.send-invite__actions button.button-primary-large");
-                    if(envoyer.innerText == "Envoyer maintenant"){
+                    if(["Envoyer maintenant", "Send now"].includes(envoyer.innerText)){
                         envoyer.click();
                     }else{
                         document.querySelector("button.send-invite__cancel-btn").click();
