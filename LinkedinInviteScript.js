@@ -16,7 +16,7 @@
     };
     
     function sendRequest(){
-        var $btn = $("button.button-secondary-small").first()
+        var $btn = $("[data-control-name='invite']").first();
         if($btn){
             count ++;
             $btn.click();
