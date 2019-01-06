@@ -9,7 +9,7 @@
         index++;
         scroll(0, document.body.clientHeight * (index / 10));
         if(index >= btnInvites.length){
-            index = 0;
+            index = -1;
             clearConsole();
             console.info("load next page");
             (document.querySelector("button.next") || document.querySelector("button.artdeco-pagination__button--next")).click()
