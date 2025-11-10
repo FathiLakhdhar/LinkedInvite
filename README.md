@@ -2,13 +2,13 @@
 Script JS send invites automatically
 
 
-1. Open Browser 'https://www.linkedin.com/mynetwork/'
+1. Open Browser '[https://www.linkedin.com/mynetwork/](https://www.linkedin.com/search/results/people/)'
 2. Open the JavaScript console
-3. Copy the content of LinkedinInviteScript.js and paste it in the JavaScript console
+3. Copy the content of scriptV2.js and paste it in the JavaScript console
 4. Click on enter
 5. 
 ```javascript
-LinkedIn.invite.start() // start send invites automatically
-LinkedIn.invite.count() // number of the invites
-LinkedIn.invite.stop() // stop send invites automatically
+Linkedin.start() // start send invites automatically
+Linkedin.count() // number of the invites
+Linkedin.stop() // stop send invites automatically
 ```
